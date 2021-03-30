@@ -1,0 +1,416 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap');
+$color1: #2e323f;
+$color2: #3b4050;
+$color3: #6f737f;
+$text-color1: #fff;
+$text-color2: #a59678;
+$text-font-title: 'Oswald', sans-serif;
+$text-font-content: 'Montserrat', sans-serif;
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, a {
+    font-family: $text-font-title;
+}
+
+p {
+    font-family: $text-font-content;
+}
+
+header {
+    background: $color1;
+    position: relative;
+
+    .navbar {
+        padding: 1em;
+        margin: 0 auto;
+        width: 80%;
+        min-width: 400px;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            color: white;
+        }
+
+        label {
+            color: white;
+        }
+
+        input {
+            display: none;
+            &:checked ~ nav {
+                // display: block;
+                transform: scaleY(1.0);
+
+            }
+        }
+
+        nav {
+            transform: scaleY(0.0);
+
+            position: absolute;
+            background: $color1;
+            width: 100vw;
+            top: 60px;
+            left: 0;
+
+            ul {
+                width: 50%;
+                margin: 0 auto;
+                // outline: 1px solid red;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 10px;
+
+                li {
+                    a{
+                        color: white;
+                        font-size: 1.25rem;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+
+                    & + li {
+                        margin-top: 1em;
+                    }
+
+                    #sign_up {
+                        border-radius: 30px;
+                        background: $text-color2;
+                        color:  $text-color1;
+                        padding: .1em 1em;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+.landing-section {
+    background: $color2;
+    margin-top: -1px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 3rem;
+
+    .title {
+        h1 {
+            color: white;
+            margin-bottom: 3rem;
+            font-size: 5rem;
+
+            span {
+                color: $text-color2;
+            }
+        }
+    }
+
+    .secondary-title {
+        p {
+            color: white;
+            margin-bottom: 2em;
+            font-size: 1.5rem;
+        }
+
+        a {
+            border-radius: 30px;
+            background: $text-color2;
+            color:  $text-color1;
+            padding: .3em 1em;
+            font-weight: 900;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.section-2 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    .contents {
+        h2{
+            color: $text-color2;
+            padding: 1em 2em;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        p {
+            padding: 0 2em;
+            text-align: center;
+            font-size: 1.125rem;
+        }
+    }
+
+}
+
+.section-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+
+    .main-content {
+        margin-bottom: 20px;
+
+        h2 {
+            color: $text-color2;
+            padding: 1em 0em;
+            font-size: 2.25rem;
+        }
+
+        p {
+            font-size: 1.625rem;
+        }
+
+        img {
+            width: 100%;
+            padding: 1rem 0;
+        }
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .content {
+            background-color: $color2;
+
+            & + .content {
+                margin-top: 10px;
+            }
+
+            h1 {
+                color: white;
+                font-size: 2rem;
+                padding: 1em;
+                text-transform: capitalize;
+                text-align: center;
+            }
+
+            p {
+                color: white;
+                font-size: 1.25rem;
+                padding: 0em 1em 1em;
+                text-align: center;
+            }
+        }
+    }
+}
+
+footer {
+    background: $color2;
+    padding: 2em;
+    .title {
+        width: 70%;
+        margin: 0 auto;
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            padding: 1em;
+        }
+    }
+
+    .content {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        
+        .about {
+            h3{
+                color: $text-color2;
+                text-align: center;
+                padding: 1em;
+                font-size: 1.3125rem;
+            }
+
+            p {
+                color: white;
+                padding-bottom: 1em;
+                font-size: 1rem;
+            }
+
+        }
+
+        .bottom-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+            .nav-group {
+                width: 30%;
+
+                & + .nav-group {
+                    margin-left: 10px;
+                }
+
+                h2 {
+                    color: $text-color2;
+                    margin-bottom: 1em;
+                    height: 3em;
+                    font-size: 1.3125rem;
+
+                }
+
+                ul {
+                    li {
+                        & + li {
+                            margin-top: 1em;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            font-size: 1rem;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 700px) {
+
+    header .navbar {
+        .toggle-button {
+            display: none;
+        }
+    
+        nav {
+            position: relative; 
+            transform: scaleY(1.0);   
+            top: 0;
+            margin-left: auto;
+            width: auto;
+
+            ul {
+                width: unset;
+                flex-direction: row;
+                align-items: center;
+                padding-bottom: 0px;
+
+                li + li {
+                    margin-top: 0px;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+
+
+    .section-3 {
+        .aside {
+            flex-direction: row;
+            align-items: unset;
+            .content + .content{
+                margin-top: 0;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1100px) {
+    .landing-section {
+        flex-direction: row;
+        justify-content: space-around;
+
+        & > * {
+            width: 45%;
+        }
+
+        .secondary-title {
+            p {
+                padding-top: 200px;
+            }
+        }
+    }
+
+    .section-2 {
+        flex-direction: row;
+    }
+    .section-3 {
+        flex-direction: row;
+        justify-content: space-between;
+        .main-content {
+            width: 60%;
+            h2 {
+                padding-top: 0px;
+            }
+        }
+
+        .aside {
+            width: 35%;
+
+            flex-direction: column;
+
+            .content + .content {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    footer {
+        padding: 1em;
+        .content {
+            width: 90%;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            .about {
+                width: 30%;
+
+                h3 {
+                    text-align: left;
+                    padding-left: 0px;
+                    padding-top: 0px;
+                }
+            }
+
+            .bottom-nav {
+                width: 60%;
+                .nav-group {
+                    h2 {
+                        height: auto;
+    
+                    }
+                }
+                
+            }
+        }
+    }
+}
